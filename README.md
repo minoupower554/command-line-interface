@@ -1,6 +1,6 @@
 # smol command handler with dynamic dll loading
 
-simple handler code for dynamic DLL loading with provided standard commands
+simple handler code for dynamic DLL loading with provided standard commands (WIP)
 
 ### how to implement your own commands
 
