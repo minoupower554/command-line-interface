@@ -4,10 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <BaseOutputPath>libs\</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\command_interfaces\CommandInterfaces.csproj" />
+    <ProjectReference Include="..\command_interfaces\PluginAPI.Assembly.csproj" />
   </ItemGroup>
 
 </Project>

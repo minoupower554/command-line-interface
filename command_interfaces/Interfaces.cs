@@ -1,11 +1,10 @@
-﻿namespace CommandInterfaces
+﻿namespace PluginAPI.Assembly;
+
+internal interface ICommand
 {
-  public interface ICommand
-  {
-	static string? Prefix => Prefix;
-	static string? CommandName { get; } = "test";
-	static string? CommandDescription => CommandDescription;
-	string[] Parameters { set; }
-	void Execute();
-  }
+  string Prefix { get; }
+  string CommandName { get; }
+  string CommandDescription { get; }
+  string[] Parameters { set; }
+  void Execute();
 }

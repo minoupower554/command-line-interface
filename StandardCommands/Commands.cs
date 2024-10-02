@@ -1,22 +1,21 @@
 ﻿using System;
-using System.Reflection.Metadata.Ecma335;
-using CommandInterfaces;
+using PluginAPI.Assembly;
 
 namespace StandardCommands
 {
-  public class Command : ICommand
+  public class TestCommand : Command
   {
-	private static readonly string _Prefix = "test";
+	private readonly string _Prefix = "test";
 	private static readonly string _Name = "test command";
 	private static readonly string _Desc = "test command";
-	private string[] _Parameters = []; // shut up chatgpt this works and you cant change my mind
+	private string[] _Parameters = Array.Empty<string>();
 
-	public static string Prefix => _Prefix;
-	public string CommandName { get { return _Name; } }
-	public string CommandDescription { get { return _Desc; } }
-	public string[] Parameters { set { _Parameters = value; } }
+	public override string Prefix => _Prefix;
+	public override string CommandName => _Name;
+	public override string CommandDescription => _Desc;
+	public override string[] Parameters { set => _Parameters = value; }
 
-	public void Execute()
+    public override void Execute()
 	{
 	  Console.WriteLine(string.Join(", ", _Parameters));
 	}
